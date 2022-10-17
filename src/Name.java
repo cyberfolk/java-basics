@@ -1,7 +1,6 @@
-/* ESERCIZIO 2
- * Testo:
- * Scrivere un programma che visualizzi sullo schermo del terminale il vostro nome
- * all’interno di un rettangolo, come nell’esempio seguente:
+/* ES 1.2 - INTRODUZIONE
+ * Scrivere un programma che visualizzi sullo schermo del terminale il 
+ * vostro nome all’interno di un rettangolo, come nell’esempio seguente:
  *    + - - +
  *    | Dave |
  *    + - - + 

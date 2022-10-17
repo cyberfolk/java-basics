@@ -1,5 +1,5 @@
-/* ESERCIZIO 3
- * Si costruisce un rettangolo partendo da una base, un’altezza e dalle coordinate del piano. 
+/* ES 2.1 - USARE OGGETTI
+ * Costruire un rettangolo partendo da una base, un’altezza e dalle coordinate del piano. 
  */
 
 public class Rettangolo {

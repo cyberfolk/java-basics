@@ -1,4 +1,4 @@
-/* ESERCIZIO 7
+/* ES 3.3 -REALIZZARE CLASSI
  * Progettare e realizzare una classe Car(automobile) con le proprietà seguenti.
  * Un’automobile ha una determinata resa del carburante (misurata in miglia/galloni
  * o in litri/chilometri: scegliete il sistema che preferite) e una certa quantità
@@ -8,6 +8,7 @@
  * livello di carburante nel serbatoio; un metodo getGas, per ispezionare il
  * livello corrente del carburante; un metodo addGas per far rifornimento. 
  */
+
 public class Car {
     // quantità di carburante nel serbatoio
     private double gas;

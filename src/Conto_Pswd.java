@@ -1,10 +1,11 @@
-/* ESERCIZIO 6
+/* ES 3.2 -REALIZZARE CLASSI
  * Lo scopo del programma è riadattare il programma presente nel libro di testo,
  * introducendo il metodo boolean controlloPassword, che restituisce true se la
  * password inserita corrisponde a quella del conto corrente cercato, e il metodo
  * boolean controlloPrelievo, che restituisce true se la somma inserita è
  * disponibile nel conto corrente. 
  */
+
 public class Conto_Pswd {
     private double saldo;
     private int password;
