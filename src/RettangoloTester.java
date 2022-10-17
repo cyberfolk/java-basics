@@ -1,3 +1,6 @@
+/* ESERCIZIO 3
+ * Si costruisce un rettangolo partendo da una base, un’altezza e dalle coordinate del piano. 
+ */
 public class RettangoloTester {
     public static void main(String[] args) {
         Rettangolo rettangolo1 = new Rettangolo();
