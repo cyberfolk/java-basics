@@ -22,7 +22,7 @@ public class Conto {
     /** Visualizza denaro sil conto
      * @return  Il saldo del conto   
      */
-    public double vediSaldo() {
+    public double getSaldo() {
         return saldo;
     }
 
@@ -39,5 +39,4 @@ public class Conto {
     public void versa(int versamento) {
         this.saldo = this.saldo + versamento;
     }
-    
 }
