@@ -1,3 +1,5 @@
+package base3;
+
 /* ES 3.2 -REALIZZARE CLASSI
  * Lo scopo del programma è riadattare il programma presente nel libro di testo,
  * introducendo il metodo boolean controlloPassword, che restituisce true se la

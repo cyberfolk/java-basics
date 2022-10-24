@@ -1,3 +1,4 @@
+package base4;
 /* Es 4.3 – Tipi dati
  * Scrivere un programma che, dato un certo tempo in secondi restituisca il numero
  * di giorni, ore, minuti e secondi. 

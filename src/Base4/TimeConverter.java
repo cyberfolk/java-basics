@@ -1,3 +1,4 @@
+package base4;
 /* Es 4.2 – Tipi dati
  * Scrivere un programma che, dato un certo tempo in giorni, ore, minuti e secondi,
  * restituisca il numero totale di secondi. 

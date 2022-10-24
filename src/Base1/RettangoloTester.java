@@ -1,3 +1,4 @@
+package base1;
 /* ES 2.1 - USARE OGGETTI
  * Costruire un rettangolo partendo da una base, un’altezza e dalle coordinate del piano. 
  */

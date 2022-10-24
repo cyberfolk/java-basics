@@ -1,4 +1,4 @@
-package Base2;
+package base2;
 
 /* ES 2.2 - USARE OGGETTI
  * Scrivere un programma che usi la classe Random per simulare il lancio di un
