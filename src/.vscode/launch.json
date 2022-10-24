@@ -1,0 +1,91 @@
+{
+    // Usare IntelliSense per informazioni sui possibili attributi.
+    // Al passaggio del mouse vengono visualizzate le descrizioni degli attributi esistenti.
+    // Per altre informazioni, visitare: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Launch TmpTest",
+            "request": "launch",
+            "mainClass": "TmpTest",
+            "projectName": "src_21721ad0"
+        },
+        {
+            "type": "java",
+            "name": "Launch Hello",
+            "request": "launch",
+            "mainClass": "base1.Hello",
+            "projectName": "src_21721ad0"
+        },
+        {
+            "type": "java",
+            "name": "Launch Name",
+            "request": "launch",
+            "mainClass": "base1.Name",
+            "projectName": "src_21721ad0"
+        },
+        {
+            "type": "java",
+            "name": "Launch RettangoloTester",
+            "request": "launch",
+            "mainClass": "base1.RettangoloTester",
+            "projectName": "src_21721ad0"
+        },
+        {
+            "type": "java",
+            "name": "Launch DadoTester",
+            "request": "launch",
+            "mainClass": "base2.DadoTester",
+            "projectName": "src_21721ad0"
+        },
+        {
+            "type": "java",
+            "name": "Launch CarTester",
+            "request": "launch",
+            "mainClass": "base3.CarTester",
+            "projectName": "src_21721ad0"
+        },
+        {
+            "type": "java",
+            "name": "Launch ContoTester",
+            "request": "launch",
+            "mainClass": "base3.ContoTester",
+            "projectName": "src_21721ad0"
+        },
+        {
+            "type": "java",
+            "name": "Launch Conto_PswdTester",
+            "request": "launch",
+            "mainClass": "base3.Conto_PswdTester",
+            "projectName": "src_21721ad0"
+        },
+        {
+            "type": "java",
+            "name": "Launch SecondConverterTester",
+            "request": "launch",
+            "mainClass": "base4.SecondConverterTester",
+            "projectName": "src_21721ad0"
+        },
+        {
+            "type": "java",
+            "name": "Launch TimeConverterTester",
+            "request": "launch",
+            "mainClass": "base4.TimeConverterTester",
+            "projectName": "src_21721ad0"
+        },
+        {
+            "type": "java",
+            "name": "Launch ElencoPersoneTester",
+            "request": "launch",
+            "mainClass": "ereditarieta.ElencoPersoneTester",
+            "projectName": "src_21721ad0"
+        }
+    ]
+}
