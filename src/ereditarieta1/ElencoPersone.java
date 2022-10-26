@@ -1,4 +1,4 @@
-package ereditarieta;
+package ereditarieta1;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -16,8 +16,12 @@ public class ElencoPersone {
         this.elenco = new ArrayList<Persona>(DIM);
     }
 
-    public void addPersona(Persona persona){
-        elenco.add(persona);
+    public Boolean addPersona(Persona persona){
+        if(elenco.size()<DIM){
+            elenco.add(persona);
+            return true;
+        } else
+            return false;
     }
     
     public String toString(){

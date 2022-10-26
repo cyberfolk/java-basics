@@ -1,4 +1,4 @@
-package ereditarieta;
+package ereditarieta1;
 
 public class Studente extends Persona{
     private String matricola;

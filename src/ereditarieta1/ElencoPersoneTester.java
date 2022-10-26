@@ -1,4 +1,8 @@
-package ereditarieta;
+/*  INCOMPLETA. 
+ *  Ci sarebbe da rifinire la Generazione delle classi all'interno dello switch
+ *  Ma non è il focus su cui volevo concentrarmi con questo esercizio.
+ */
+package ereditarieta1;
 
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-# Ereditarietà
+# 1- Elenco Persone
 ## Scrivere la classe **Persona** 
 Dotata dei campi CodiceFiscale, Nome, Cognome e dei metodi per impostare e leggere tali valori. 
 La classe inoltre dovrà essere dotata del metodo toString().

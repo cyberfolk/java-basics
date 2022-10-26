@@ -1,4 +1,4 @@
-package ereditarieta;
+package ereditarieta1;
 
 public class Persona {
     private String  nome;
