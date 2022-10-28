@@ -22,6 +22,7 @@ public class Aggiusteria {
             System.out.println("> Non ci sono id da Eliminare");
             return;
         }
+
         System.out.println("> Scegli che id eliminare tra: " + getPostiOccupati());
         System.out.print("> Inserire id:_ ");
         try{
