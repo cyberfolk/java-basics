@@ -135,15 +135,11 @@ public class Test {
 	 * @param strReadNormal StringBuilder sul quale salvo i dati letti con FileReader
 	 * @return readTime Tempo di lettura del FileReader
 	 */
-	public static long readNormal(FileReader fr, StringBuilder strReadNormal ){
+	public static long readNormal(FileReader fr, StringBuilder strReadNormal ) throws IOException{
 		int readInt = -2; // Dove salvo temporaneamente gli interi letti con il metodo FileReader#read()
 		long initialTime = System.currentTimeMillis();
 		do{ 
-			try { 
-				readInt = fr.read(); // Reads one character at a time and returns it as an integer
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
+			readInt = fr.read(); // Reads one character at a time and returns it as an integer
 			if (readInt!=-1) strReadNormal.append((char)readInt);
 		} while (readInt!=-1); // When the "End Of File" is reached the read() method returns -1
 		return System.currentTimeMillis() - initialTime;
@@ -154,15 +150,11 @@ public class Test {
 	 * @param strReadBuffer StringBuilder sul quale salvo i dati letti con BufferedReader
 	 * @return readTime Tempo di lettura del BufferedReader
 	 */
-	public static long readBuffer(BufferedReader br, StringBuilder strReadBuffer){
+	public static long readBuffer(BufferedReader br, StringBuilder strReadBuffer) throws IOException{
 		String readLine = ""; // Dove salvo temporaneamente le stringhe lette con il metodo BufferedReader#readLine()
 		long initialTime = System.currentTimeMillis();
 		do{ 
-			try {
-				readLine = br.readLine();	// readLine() method of BufferedReader returns a whole line at a time
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
+			readLine = br.readLine();	// readLine() method of BufferedReader returns a whole line at a time
 			if(readLine != null) strReadBuffer.append(readLine+"\n");
 		} while(readLine != null); // When the read head reaches the "End Of File" the readLine method returns null
 		return System.currentTimeMillis() - initialTime;
