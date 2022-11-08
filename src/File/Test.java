@@ -54,26 +54,21 @@ public class Test {
 	public static long[] writeTestHard(String fn_writeNormalHard, String fn_writeBufferHard, StringBuilder copyString){
 		long writeTime[] = new long[2];
 		long initialTime;
-		try {
+
+		try(
 			FileWriter fw1 = new FileWriter(fn_writeNormalHard);
 			FileWriter fw2 = new FileWriter(fn_writeBufferHard);
 			BufferedWriter bw = new BufferedWriter(fw2);
-			
+		){
 			initialTime = System.currentTimeMillis();
-			for (int i=0 ; i< copyString.length(); i++) {
+			for (int i=0 ; i< copyString.length(); i++)
 				fw1.write(copyString.substring(i, i+1));
-			}
 			writeTime[0]=System.currentTimeMillis() - initialTime;
 
 			initialTime = System.currentTimeMillis();
-			for (int i=0 ; i< copyString.length(); i++) {
+			for (int i=0 ; i< copyString.length(); i++) 
 				bw.write(copyString.substring(i, i+1));
-			}
 			writeTime[1]=System.currentTimeMillis() - initialTime;
-
-			bw.close();
-			fw2.close();
-			fw1.close();
 
 		} catch (IOException e1) {
 			e1.printStackTrace();
