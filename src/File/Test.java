@@ -86,11 +86,12 @@ public class Test {
 	public static long[] writeTestEasy(String fn_writeNormalEasy, String fn_writeBufferEasy, StringBuilder copyString){
 		long writeTime[] = new long[2];
 		long initialTime;
-		try {
+		
+		try (
 			FileWriter fw1 = new FileWriter(fn_writeNormalEasy);
 			FileWriter fw2 = new FileWriter(fn_writeBufferEasy);
 			BufferedWriter bw = new BufferedWriter(fw2 );
-			
+		){	
 			initialTime = System.currentTimeMillis();
 			fw1.write(copyString.toString());
 			writeTime[0]=System.currentTimeMillis() - initialTime;
@@ -98,10 +99,6 @@ public class Test {
 			initialTime = System.currentTimeMillis();
 			bw.write(copyString.toString());
 			writeTime[1]=System.currentTimeMillis() - initialTime;
-
-			bw.close();
-			fw2.close();
-			fw1.close();
 
 		} catch (IOException e1) {
 			e1.printStackTrace();
@@ -117,23 +114,18 @@ public class Test {
 	 */
 	public static long[] readTest(String fn_read, StringBuilder strReadNormal, StringBuilder strReadBuffer){
 		long readTime[] = new long[2];
-		try{
+		try(
 			FileReader fr1 = new FileReader(fn_read);
 			FileReader fr2 = new FileReader(fn_read);
 			BufferedReader br = new BufferedReader(fr2);
-
+		){
 			readTime[0] = readNormal(fr1, strReadNormal);
 			readTime[1] = readBuffer(br, strReadBuffer);
 			
-			try {
-				br.close();
-				fr2.close();
-				fr1.close();
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
+		} catch (IOException e1) {
+			e1.printStackTrace();
 		}
 		return readTime;
 	}
