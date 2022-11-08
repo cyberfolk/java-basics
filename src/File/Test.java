@@ -20,25 +20,25 @@ import java.io.BufferedWriter;
 public class Test {
 
 	public static void main(String[] args){
-		StringBuilder strReadNormal = new StringBuilder(); // Stringhe da appoggio per memorizzare ciò che viene letto da file.
-		StringBuilder strReadBuffer = new StringBuilder(); // Stringhe da appoggio per memorizzare ciò che viene letto da file.
+		StringBuilder strBldrNormal = new StringBuilder(); // Stringhe da appoggio per memorizzare ciò che viene letto da file.
+		StringBuilder strBldrBuffer = new StringBuilder(); // Stringhe da appoggio per memorizzare ciò che viene letto da file.
 		String fn_read = "File/fn_read.txt";
 		String fn_writeEasy_Normal = "File/fn_writeEasy_Normal.txt";
 		String fn_writeEasy_Buffer = "File/fn_writeEasy_Buffer.txt";
 		String fn_writeHard_Normal = "File/fn_writeHard_Normal.txt";
 		String fn_writeHard_Buffer = "File/fn_writeHard_Buffer.txt";
 
-		long readTime[] = readTest(fn_read, strReadNormal, strReadBuffer);
+		long readTime[] = readTest(fn_read, strBldrNormal, strBldrBuffer);
 		System.out.println("Read Time Normal: " + readTime[0]);
 		System.out.println("Read Time Buffer: " + readTime[1]);
 		System.out.printf("-> Efficenza: %.2f\n\n" , (1-((double)readTime[1]/readTime[0])));
 
-		long writeTimeEasy[] = writeTestEasy(fn_writeEasy_Normal, fn_writeEasy_Buffer, strReadNormal);
+		long writeTimeEasy[] = writeTestEasy(fn_writeEasy_Normal, fn_writeEasy_Buffer, strBldrNormal);
 		System.out.println("Write Time Normal Easy: " + writeTimeEasy[0]);
 		System.out.println("Write Time Buffer Easy: " + writeTimeEasy[1]);
 		System.out.printf("-> Efficenza: %.2f\n\n" , (1-((double)writeTimeEasy[1]/writeTimeEasy[0])));
 
-		long writeTimeHard[] = writeTestHard(fn_writeHard_Normal, fn_writeHard_Buffer, strReadNormal);
+		long writeTimeHard[] = writeTestHard(fn_writeHard_Normal, fn_writeHard_Buffer, strBldrNormal);
 		System.out.println("Write Time Normal Hard: " + writeTimeHard[0]);
 		System.out.println("Write Time Buffer Hard: " + writeTimeHard[1]); 
 		System.out.printf("-> Efficenza: %.2f\n\n" , (1-((double)writeTimeHard[1]/writeTimeHard[0])));
@@ -108,19 +108,19 @@ public class Test {
 
 	/**Confronto i tempi di Lettura tra FileReader e BufferedReader. 
 	 * @param fn_read File di partenza da quale voglio leggere sia con BufferedReader che con FileReader
-	 * @param strReadNormal StringBuilder sul quale riscrivo i dati letti con FileReader
-	 * @param strReadBuffer StringBuilder sul riscrivo i dati letti con BufferedReader
+	 * @param strBldrNormal StringBuilder sul quale riscrivo i dati letti con FileReader
+	 * @param strBldrBuffer StringBuilder sul riscrivo i dati letti con BufferedReader
 	 * @return readTime[0] Tempo di lettura del FileReader. readTime[1] Tempo di lettura del BufferedReader
 	 */
-	public static long[] readTest(String fn_read, StringBuilder strReadNormal, StringBuilder strReadBuffer){
+	public static long[] readTest(String fn_read, StringBuilder strBldrNormal, StringBuilder strBldrBuffer){
 		long readTime[] = new long[2];
 		try(
 			FileReader fr1 = new FileReader(fn_read);
 			FileReader fr2 = new FileReader(fn_read);
 			BufferedReader br = new BufferedReader(fr2);
 		){
-			readTime[0] = readNormal(fr1, strReadNormal);
-			readTime[1] = readBuffer(br, strReadBuffer);
+			readTime[0] = readNormal(fr1, strBldrNormal);
+			readTime[1] = readBuffer(br, strBldrBuffer);
 			
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
@@ -130,33 +130,34 @@ public class Test {
 		return readTime;
 	}
 
-	/**Metodo che legge i dati da FileReader e li salva in strReadNormal
+	/**Metodo che legge i dati da FileReader e li salva in strBldrNormal
 	 * @param fr FileReader
-	 * @param strReadNormal StringBuilder sul quale salvo i dati letti con FileReader
+	 * @param strBldrNormal StringBuilder sul quale salvo i dati letti con FileReader
 	 * @return readTime Tempo di lettura del FileReader
 	 */
-	public static long readNormal(FileReader fr, StringBuilder strReadNormal ) throws IOException{
-		int readInt = -2; // Dove salvo temporaneamente gli interi letti con il metodo FileReader#read()
+	public static long readNormal(FileReader fr, StringBuilder strBldrNormal ) throws IOException{
 		long initialTime = System.currentTimeMillis();
-		do{ 
-			readInt = fr.read(); // Reads one character at a time and returns it as an integer
-			if (readInt!=-1) strReadNormal.append((char)readInt);
-		} while (readInt!=-1); // When the "End Of File" is reached the read() method returns -1
+		int readInt; // Dove appoggio gli interi letti con il metodo read()
+		
+		while ((readInt = fr.read())!=-1){ // When the "End Of File" is reached the read() method returns -1			
+			strBldrNormal.append((char)readInt);
+		} 
 		return System.currentTimeMillis() - initialTime;
 	}
 	
-	/**Metodo che legge i dati da BufferedReader e li salva in strReadBuffer
+	/**Metodo che legge i dati da BufferedReader e li salva in strBldrBuffer
 	 * @param br BufferedReader
-	 * @param strReadBuffer StringBuilder sul quale salvo i dati letti con BufferedReader
+	 * @param strBldrBuffer StringBuilder sul quale salvo i dati letti con BufferedReader
 	 * @return readTime Tempo di lettura del BufferedReader
 	 */
-	public static long readBuffer(BufferedReader br, StringBuilder strReadBuffer) throws IOException{
-		String readLine = ""; // Dove salvo temporaneamente le stringhe lette con il metodo BufferedReader#readLine()
+	public static long readBuffer(BufferedReader br, StringBuilder strBldrBuffer) throws IOException{
 		long initialTime = System.currentTimeMillis();
-		do{ 
-			readLine = br.readLine();	// readLine() method of BufferedReader returns a whole line at a time
-			if(readLine != null) strReadBuffer.append(readLine+"\n");
-		} while(readLine != null); // When the read head reaches the "End Of File" the readLine method returns null
+		String readLine; // Dove appoggio le stringhe lette con il metodo readLine()
+		
+		while((readLine = br.readLine()) != null){ // When the "End Of File" is reached the readline() method returns null
+			strBldrBuffer.append(readLine+"\n");
+		}
+		strBldrBuffer.deleteCharAt(strBldrBuffer.length()-1);
 		return System.currentTimeMillis() - initialTime;
 	}
 }
