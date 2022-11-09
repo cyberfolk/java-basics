@@ -17,7 +17,7 @@ import java.io.FileWriter;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 
-public class Test {
+public class FileTest {
 
 	public static void main(String[] args){
 		StringBuilder strBldrNormal = new StringBuilder(); // Stringhe da appoggio per memorizzare ciò che viene letto da file.
