@@ -31,17 +31,17 @@ public class Test {
 		long readTime[] = readTest(fn_read, strBldrNormal, strBldrBuffer);
 		System.out.println("Read Time Normal: " + readTime[0]);
 		System.out.println("Read Time Buffer: " + readTime[1]);
-		System.out.printf("-> Efficenza: %.2f\n\n" , (1-((double)readTime[1]/readTime[0])));
+		System.out.printf("Efficenza: %.2f\n\n" , (1-((double)readTime[1]/readTime[0])));
 
 		long writeTimeEasy[] = writeTestEasy(fn_writeEasy_Normal, fn_writeEasy_Buffer, strBldrNormal);
 		System.out.println("Write Time Normal Easy: " + writeTimeEasy[0]);
 		System.out.println("Write Time Buffer Easy: " + writeTimeEasy[1]);
-		System.out.printf("-> Efficenza: %.2f\n\n" , (1-((double)writeTimeEasy[1]/writeTimeEasy[0])));
+		System.out.printf("Efficenza: %.2f\n\n" , (1-((double)writeTimeEasy[1]/writeTimeEasy[0])));
 
 		long writeTimeHard[] = writeTestHard(fn_writeHard_Normal, fn_writeHard_Buffer, strBldrNormal);
 		System.out.println("Write Time Normal Hard: " + writeTimeHard[0]);
 		System.out.println("Write Time Buffer Hard: " + writeTimeHard[1]); 
-		System.out.printf("-> Efficenza: %.2f\n\n" , (1-((double)writeTimeHard[1]/writeTimeHard[0])));
+		System.out.printf("Efficenza: %.2f\n\n" , (1-((double)writeTimeHard[1]/writeTimeHard[0])));
 	}
 
 	/**Confronto i tempi di scrittura tra FileWriter e BufferedWriter. 
@@ -51,7 +51,7 @@ public class Test {
 	 * @param copyString Stringa da copiare su entrambu i File
 	 * @return writeTime[0] Tempo di scrittura del FileReader. writeTime[1] Tempo di scrittura del BufferReader
 	 */
-	public static long[] writeTestHard(String fn_writeNormalHard, String fn_writeBufferHard, StringBuilder copyString){
+	private static long[] writeTestHard(String fn_writeNormalHard, String fn_writeBufferHard, StringBuilder copyString){
 		long writeTime[] = new long[2];
 		long initialTime;
 
@@ -83,7 +83,7 @@ public class Test {
 	 * @param copyString Stringa da copiare su entrambu i File
 	 * @return writeTime[0] Tempo di scrittura del FileReader. writeTime[1] Tempo di scrittura del BufferReader
 	 */
-	public static long[] writeTestEasy(String fn_writeNormalEasy, String fn_writeBufferEasy, StringBuilder copyString){
+	private static long[] writeTestEasy(String fn_writeNormalEasy, String fn_writeBufferEasy, StringBuilder copyString){
 		long writeTime[] = new long[2];
 		long initialTime;
 		
@@ -112,7 +112,7 @@ public class Test {
 	 * @param strBldrBuffer StringBuilder sul riscrivo i dati letti con BufferedReader
 	 * @return readTime[0] Tempo di lettura del FileReader. readTime[1] Tempo di lettura del BufferedReader
 	 */
-	public static long[] readTest(String fn_read, StringBuilder strBldrNormal, StringBuilder strBldrBuffer){
+	private static long[] readTest(String fn_read, StringBuilder strBldrNormal, StringBuilder strBldrBuffer){
 		long readTime[] = new long[2];
 		try(
 			FileReader fr1 = new FileReader(fn_read);
@@ -135,7 +135,7 @@ public class Test {
 	 * @param strBldrNormal StringBuilder sul quale salvo i dati letti con FileReader
 	 * @return readTime Tempo di lettura del FileReader
 	 */
-	public static long readNormal(FileReader fr, StringBuilder strBldrNormal ) throws IOException{
+	private static long readNormal(FileReader fr, StringBuilder strBldrNormal ) throws IOException{
 		long initialTime = System.currentTimeMillis();
 		int readInt; // Dove appoggio gli interi letti con il metodo read()
 		
@@ -150,7 +150,7 @@ public class Test {
 	 * @param strBldrBuffer StringBuilder sul quale salvo i dati letti con BufferedReader
 	 * @return readTime Tempo di lettura del BufferedReader
 	 */
-	public static long readBuffer(BufferedReader br, StringBuilder strBldrBuffer) throws IOException{
+	private static long readBuffer(BufferedReader br, StringBuilder strBldrBuffer) throws IOException{
 		long initialTime = System.currentTimeMillis();
 		String readLine; // Dove appoggio le stringhe lette con il metodo readLine()
 		
