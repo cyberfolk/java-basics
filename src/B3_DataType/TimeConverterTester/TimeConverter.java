@@ -1,7 +1,3 @@
-/**
- * PER INFO: vedi TimeConverterTester.java
- */
-
 package B3_DataType.TimeConverterTester;
 
 public class TimeConverter {

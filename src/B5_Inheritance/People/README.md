@@ -1,4 +1,4 @@
-# Elenco Persone
+# People List
 
 ## Scrivere la classe **Persona** 
 Dotata dei campi CodiceFiscale, Nome, Cognome e dei metodi per impostare e leggere tali valori. 

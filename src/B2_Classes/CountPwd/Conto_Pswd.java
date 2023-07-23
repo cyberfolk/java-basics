@@ -1,7 +1,3 @@
-/**
- * PER INFO: vedi Conto_PswdTester.java
- */
-
 package B2_Classes.CountPwd;
 
 public class Conto_Pswd {

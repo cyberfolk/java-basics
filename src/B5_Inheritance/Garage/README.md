@@ -1,4 +1,4 @@
-# Aggiusteria Agricola
+# Garage
 All'aggiusteria agricola possono essere riparati tre tipi di apparecchiature: 
 - Motozappe, 
 - Decespugliatori, 

@@ -1,7 +1,3 @@
-/**
- * PER INFO: DadoTester.java
- */
-
 package B1_Objects.Dice;
 
 import java.util.Random;

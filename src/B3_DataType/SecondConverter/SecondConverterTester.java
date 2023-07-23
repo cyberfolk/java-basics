@@ -1,9 +1,3 @@
-/**
- * B3_DATA_TIPE: SECOND_CONVERTER
- * Dato un certo tempo in secondi restituisca il numero
- * di giorni, ore, minuti e secondi.
- */
-
 package B3_DataType.SecondConverter;
 
 import java.util.Scanner;

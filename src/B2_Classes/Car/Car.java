@@ -1,7 +1,3 @@
-/**
- * PER INFO: vedi CarTester.java
- */
-
 package B2_Classes.Car;
 
 public class Car {

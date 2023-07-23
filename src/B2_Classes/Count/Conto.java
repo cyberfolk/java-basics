@@ -1,7 +1,3 @@
-/**
- * PER INFO: ContoTester.java
- */
-
 package B2_Classes.Count;
 
 public class Conto {

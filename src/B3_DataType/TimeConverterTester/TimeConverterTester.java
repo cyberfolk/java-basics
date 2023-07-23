@@ -1,9 +1,3 @@
-/**
- * B3_DATA_TIPE: TIME_CONVERTER
- * Scrivere un programma che, dato un certo tempo in giorni, ore, minuti e secondi,
- * restituisca il numero totale di secondi. 
- */
-
 package B3_DataType.TimeConverterTester;
 
 import java.util.Scanner;

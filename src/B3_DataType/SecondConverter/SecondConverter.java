@@ -1,7 +1,3 @@
-/**
- * PER INFO: vedi SecondConverterTester.java
- */
-
 package B3_DataType.SecondConverter;
 
 public class SecondConverter {

@@ -1,9 +1,3 @@
-/**
- * OBJECTS
- * Scrivere un programma che usi la classe Random per simulare il lancio di un dado,
- * visualizzando un numero casuale compreso tra 1 e 6 ogni volta che viene eseguito.
- */
-
 package B1_Objects.Dice;
 
 public class DadoTester {

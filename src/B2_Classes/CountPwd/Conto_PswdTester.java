@@ -1,11 +1,3 @@
-/** 
- * CLASSES: COUNT_PWD
- * Riadattare B3_Classes introducendo il metodo boolean controlloPassword,
- * che restituisce true se la password inserita corrisponde a quella del conto cercato, 
- * e il metodo boolean controlloPrelievo, che restituisce true se la somma inserita è
- * disponibile nel conto corrente. 
- */
-
 package B2_Classes.CountPwd;
 
 import java.util.Scanner;
