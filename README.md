@@ -1,18 +1,13 @@
-## Getting Started
+# Java Basics
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+This repository contains a list of basic Java exercises.
 
-## Folder Structure
+The exercises are contained in the src directory.
 
-The workspace contains two folders by default, where:
-
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
-
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+## The themes of the exercises are
+1. Objects
+2. Classes
+3. Data Type
+4. Files
+5. Inheritance
+6. Strings
