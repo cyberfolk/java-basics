@@ -1,11 +1,12 @@
-# Java basics exercises
+# Java Basics
 
-The exercises are contained in the src directory.
+**Initial commit**: 16/10/22
 
-## The topics of the exercises are
-1. Objects
-2. Classes
-3. Data Type
-4. Files
-5. Inheritance
-6. Strings
+:coffee: This Repo contains fundamental Java exercises such as:
+- Objects, Classes, Inheritance
+- Data Type, Strings
+- Files
+
+NB: The exercises are contained in the src directory.
+
+
